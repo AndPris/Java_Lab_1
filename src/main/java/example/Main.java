@@ -37,9 +37,9 @@ public class Main {
 
     private static void displayMatrix(long[][] matrix, String matrixName) {
         System.out.println(matrixName + ":");
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++)
-                System.out.printf("%5d", matrix[i][j]);
+        for (long[] row : matrix) {
+            for (long element : row)
+                System.out.printf("%5d", element);
 
             System.out.println();
         }

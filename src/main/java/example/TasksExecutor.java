@@ -32,9 +32,9 @@ public class TasksExecutor {
     private long findMaxElement(long[][] matrix, int column) {
         long max = Long.MIN_VALUE;
 
-        for (int i = 0; i < matrix.length; i++) {
-            if(matrix[i][column] > max)
-                max = matrix[i][column];
+        for (long[] row : matrix) {
+            if (row[column] > max)
+                max = row[column];
         }
 
         return max;
@@ -56,9 +56,9 @@ public class TasksExecutor {
     private long findMinElement(long[][] matrix, int column) {
         long min = Long.MAX_VALUE;
 
-        for (int i = 0; i < matrix.length; i++) {
-            if(matrix[i][column] < min)
-                min = matrix[i][column];
+        for (long[] row : matrix) {
+            if (row[column] < min)
+                min = row[column];
         }
 
         return min;
